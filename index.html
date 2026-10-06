@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ghost writing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jacquard+12&family=Syne+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <aside class="settings" id="settings">
+      <button
+        type="button"
+        class="settings-toggle"
+        id="settings-toggle"
+        aria-expanded="false"
+        aria-controls="settings-panel"
+      >
+        settings
+      </button>
+      <div class="settings-panel" id="settings-panel" hidden>
+        <div class="settings-field">
+          <span>grid size</span>
+          <div class="settings-options" id="setting-size" role="group" aria-label="grid size">
+            <button type="button" data-value="5">5</button>
+            <button type="button" data-value="6">6</button>
+            <button type="button" data-value="7">7</button>
+            <button type="button" data-value="8">8</button>
+            <button type="button" data-value="9">9</button>
+          </div>
+        </div>
+        <div class="settings-field">
+          <span>poem</span>
+          <div class="settings-options" id="setting-poem" role="group" aria-label="poem">
+            <button type="button" data-value="random">random</button>
+            <button type="button" data-value="hd">HD</button>
+            <button type="button" data-value="mengna">mengna</button>
+            <button type="button" data-value="droqen">droqen</button>
+            <button type="button" data-value="moon">moon</button>
+          </div>
+        </div>
+        <div class="settings-field">
+          <span>ghost mode</span>
+          <div class="settings-options" id="setting-ghost" role="group" aria-label="ghost mode">
+            <button type="button" data-value="on">on</button>
+            <button type="button" data-value="off">off</button>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="game">
+      <section class="poem-panel" aria-live="polite">
+        <p id="poem" class="poem empty">your poem will appear here</p>
+      </section>
+      <div class="boards">
+        <div id="grid" class="grid" role="grid" aria-label="Main word grid"></div>
+        <div id="ghost-grid" class="grid ghost-grid" role="grid" aria-label="Ghost word grid"></div>
+      </div>
+      <p class="hint">use arrow keys to move. enter for a line break.</p>
+    </main>
+    <script src="game.js"></script>
+  </body>
+</html>
